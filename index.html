@@ -1,0 +1,76 @@
+<!doctype html>
+<!-- Define o tipo do documento como HTML5 -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Define a codificação de caracteres para evitar problemas com acentuação -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Garante responsividade em dispositivos móveis -->
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Arquivo principal de estilos da aplicação -->
+
+    <title>Clima</title>
+    <!-- Título exibido na aba do navegador -->
+  </head>
+
+  <body>
+    <!-- Seção principal da aplicação de clima -->
+    <section>
+      <div class="container">
+        <!-- Container central para organizar layout e alinhamento -->
+
+        <!-- Formulário principal da aplicação -->
+        <form id="formClima" class="form">
+          <!-- Área de busca da cidade -->
+          <div class="container-clima">
+            <!-- Campo de entrada para o usuário digitar a cidade -->
+            <input
+              type="text"
+              name="text"
+              id="inputCidade"
+              placeholder="Digite o nome da cidade"
+            />
+
+            <!-- Botão que dispara a busca do clima via JavaScript -->
+            <button type="button" id="buscar">Buscar</button>
+          </div>
+          <!-- Fim da área de busca -->
+
+          <!-- Bloco responsável por exibir cidade, país e data -->
+          <div id="country" class="pesq-cidade">
+            <!-- Título fixo da seção -->
+            <h1>País</h1>
+            <h2 id="nacao"></h2>
+            
+            <!-- Local onde será inserido dinamicamente o nome da cidade e bandeira -->
+            <div class="cidade-bandeira" id="cidade-escolhida"></div>
+
+            <!-- Local onde será exibida a data atual da cidade -->
+            <div id="data-hj" class="data"></div>
+          </div>
+
+          <!-- Elemento visual para separação vertical entre seções -->
+          <div class="linhaVertical"></div>
+
+          <!-- Seção que exibe informações climáticas -->
+          <div class="sensação-termica">
+            <!-- Área onde será exibida a temperatura -->
+            <div class="umidade-tempo" id="temp-cidade"></div>
+
+            <!-- Área onde será exibida a condição do clima (ex: nublado, ensolarado) -->
+            <div class="vento_km" id="situacao-clima"></div>
+          </div>
+        </form>
+        <!-- Fim do formulário -->
+      </div>
+      <!-- Fim do container principal -->
+    </section>
+    <!-- Fim da seção principal -->
+
+    <!-- Arquivo JavaScript responsável pela lógica da aplicação -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
